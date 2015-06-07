@@ -1,8 +1,8 @@
 @song_array = [
   'A Partridge in a Pear Tree', 'Two Turtle Doves', 'Three French Hens',
-  'Calling Birds', 'Gold Rings', 'Geese a-laying',
-  'Swans a-Swimming', 'Maids a-Milking', 'Ladies Dancing',
-  'Lords a-Leaping', 'Pipers Piping', 'Drummers Drumming'
+  'Four Calling Birds', 'Five Gold Rings', 'Six Geese a-laying',
+  'Seven Swans a-Swimming', 'Eigth Maids a-Milking', 'Nine Ladies Dancing',
+  'Ten Lords a-Leaping', 'Eleven Pipers Piping', 'Twelve Drummers Drumming'
 ]
 
 @order = [
@@ -12,13 +12,13 @@
   'tenth', 'eleventh', 'twelth'
 ]
 
-def start_loop(y)
-  if y == 0
-    puts "#{@song_array[y]}"
+def start_loop(i)
+  if i == 0
+    puts "#{@song_array[i]}"
   else
-    while y >= 0
-      puts "#{@song_array[y]}"
-      y -= 1
+    while i >= 0
+      puts "#{@song_array[i]}"
+      i -= 1
     end
   end
 end
@@ -31,7 +31,6 @@ i = 0
 
 while i < @song_array.length
   starter_text(i)
-  y = i
-  start_loop(y)
+  start_loop(i)
   i += 1
 end
