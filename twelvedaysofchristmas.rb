@@ -12,7 +12,7 @@
   'tenth', 'eleventh', 'twelth'
 ]
 
-def start_loop(i)
+def inner_loop(i)
   if i == 0
     puts "#{@song_array[i]}"
   else
@@ -27,10 +27,14 @@ def starter_text(i)
   puts "on the #{@order[i]} day of christmas my true love gave to me"
 end
 
-i = 0
-
-while i < @song_array.length
-  starter_text(i)
-  start_loop(i)
-  i += 1
+def start_loop
+  i = 0
+  while i < @song_array.length
+    starter_text(i)
+    inner_loop(i)
+    i += 1
+  end
 end
+
+start_loop
+
